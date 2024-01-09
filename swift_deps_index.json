@@ -1,0 +1,150 @@
+{
+  "direct_dep_identities": [
+    "appcenter-sdk-apple",
+    "snapkit"
+  ],
+  "modules": [
+    {
+      "name": "AppCenterAnalytics",
+      "c99name": "AppCenterAnalytics",
+      "src_type": "objc",
+      "label": "@swiftpkg_appcenter_sdk_apple//:AppCenterAnalytics_AppCenterAnalytics",
+      "package_identity": "appcenter-sdk-apple",
+      "product_memberships": [
+        "AppCenterAnalytics"
+      ]
+    },
+    {
+      "name": "AppCenterCrashes",
+      "c99name": "AppCenterCrashes",
+      "src_type": "objc",
+      "label": "@swiftpkg_appcenter_sdk_apple//:AppCenterCrashes_AppCenterCrashes",
+      "package_identity": "appcenter-sdk-apple",
+      "product_memberships": [
+        "AppCenterCrashes"
+      ]
+    },
+    {
+      "name": "AppCenterDistribute",
+      "c99name": "AppCenterDistribute",
+      "src_type": "objc",
+      "label": "@swiftpkg_appcenter_sdk_apple//:AppCenterDistribute_AppCenterDistribute",
+      "package_identity": "appcenter-sdk-apple",
+      "product_memberships": [
+        "AppCenterDistribute"
+      ]
+    },
+    {
+      "name": "AppCenter",
+      "c99name": "AppCenter",
+      "src_type": "objc",
+      "label": "@swiftpkg_appcenter_sdk_apple//:AppCenter_AppCenter",
+      "package_identity": "appcenter-sdk-apple",
+      "product_memberships": [
+        "AppCenterAnalytics",
+        "AppCenterCrashes",
+        "AppCenterDistribute"
+      ]
+    },
+    {
+      "name": "CrashReporter",
+      "c99name": "CrashReporter",
+      "src_type": "objc",
+      "label": "@swiftpkg_plcrashreporter//:CrashReporter",
+      "package_identity": "plcrashreporter",
+      "product_memberships": [
+        "CrashReporter"
+      ]
+    },
+    {
+      "name": "SnapKit",
+      "c99name": "SnapKit",
+      "src_type": "swift",
+      "label": "@swiftpkg_snapkit//:Sources_SnapKit",
+      "package_identity": "snapkit",
+      "product_memberships": [
+        "SnapKit",
+        "SnapKit-Dynamic"
+      ]
+    }
+  ],
+  "products": [
+    {
+      "identity": "appcenter-sdk-apple",
+      "name": "AppCenterAnalytics",
+      "type": "library",
+      "target_labels": [
+        "@swiftpkg_appcenter_sdk_apple//:AppCenterAnalytics_AppCenterAnalytics"
+      ]
+    },
+    {
+      "identity": "appcenter-sdk-apple",
+      "name": "AppCenterCrashes",
+      "type": "library",
+      "target_labels": [
+        "@swiftpkg_appcenter_sdk_apple//:AppCenterCrashes_AppCenterCrashes"
+      ]
+    },
+    {
+      "identity": "appcenter-sdk-apple",
+      "name": "AppCenterDistribute",
+      "type": "library",
+      "target_labels": [
+        "@swiftpkg_appcenter_sdk_apple//:AppCenterDistribute_AppCenterDistribute"
+      ]
+    },
+    {
+      "identity": "plcrashreporter",
+      "name": "CrashReporter",
+      "type": "library",
+      "target_labels": [
+        "@swiftpkg_plcrashreporter//:CrashReporter"
+      ]
+    },
+    {
+      "identity": "snapkit",
+      "name": "SnapKit",
+      "type": "library",
+      "target_labels": [
+        "@swiftpkg_snapkit//:Sources_SnapKit"
+      ]
+    },
+    {
+      "identity": "snapkit",
+      "name": "SnapKit-Dynamic",
+      "type": "library",
+      "target_labels": [
+        "@swiftpkg_snapkit//:Sources_SnapKit"
+      ]
+    }
+  ],
+  "packages": [
+    {
+      "name": "swiftpkg_appcenter_sdk_apple",
+      "identity": "appcenter-sdk-apple",
+      "remote": {
+        "commit": "1120c26835925f8314d035127c580bc71689c620",
+        "remote": "https://github.com/microsoft/appcenter-sdk-apple",
+        "version": "5.0.4"
+      }
+    },
+    {
+      "name": "swiftpkg_plcrashreporter",
+      "identity": "plcrashreporter",
+      "remote": {
+        "commit": "1aed8f7dc79ce8e674c61e430ef51ca3db18cea9",
+        "remote": "https://github.com/microsoft/PLCrashReporter.git",
+        "version": "1.11.1"
+      }
+    },
+    {
+      "name": "swiftpkg_snapkit",
+      "identity": "snapkit",
+      "remote": {
+        "commit": "e74fe2a978d1216c3602b129447c7301573cc2d8",
+        "remote": "https://github.com/SnapKit/SnapKit.git",
+        "version": "5.7.0"
+      }
+    }
+  ]
+}
