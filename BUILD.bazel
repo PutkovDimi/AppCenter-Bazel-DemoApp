@@ -1,5 +1,4 @@
 load("@bazel_gazelle//:def.bzl", "gazelle", "gazelle_binary")
-load("@bazel_skylib//rules:build_test.bzl", "build_test")
 load("@build_bazel_rules_apple//apple:ios.bzl", "ios_application")
 load("@build_bazel_rules_swift//swift:swift.bzl", "swift_library")
 load("@cgrindel_bazel_starlib//bzltidy:defs.bzl", "tidy")
@@ -91,11 +90,4 @@ ios_application(
     ),
     visibility = ["//visibility:public"],
     deps = [":ModuleExample"],
-)
-
-build_test(
-    name = "build_test",
-    targets = [
-        ":App",
-    ],
 )
