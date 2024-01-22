@@ -1,5 +1,48 @@
 #!/usr/bin/env bash
 
+setup_golang() {
+  if command -v go &> /dev/null
+  then
+    echo "[√] GO Lang already installed"
+    return 0;
+  fi
+  echo "    GO Lang install in progress"
+  brew install golang
+  echo "[√] GO Lang installed"
+}
+
+setup_buildifier() {
+  BUILDIFIER=$(go env GOPATH)/bin/buildifier
+  if command -v $BUILDIFIER &> /dev/null
+  then
+    echo "[√] Buildifier already installed"
+    return 0;
+  fi
+  echo "    Buildifier install in progress"
+  go install github.com/bazelbuild/buildtools/buildifier@6.1.0
+  echo "[√] Buildifier installed"
+}
+
+check_bazel() {
+  if command -v bazelisk &> /dev/null
+  then
+    echo "[√] Bazelisk already installed"
+    return 0;
+  elif command -v bazel &> /dev/null
+  then
+    echo "[√] Bazel already installed"
+    return 0;
+  fi
+
+  echo "    Bazelisk install in progress"
+  brew install bazelisk >/dev/null
+  echo "[√] Bazelisk installed"
+}
+
+setup_golang
+setup_buildifier
+check_bazel
+
 set -o errexit -o nounset -o pipefail
 
 # Use the Bazel binary specified by the integration test. Otherise, fall back 

@@ -1,7 +1,6 @@
 {
   "direct_dep_identities": [
-    "appcenter-sdk-apple",
-    "snapkit"
+    "appcenter-sdk-apple"
   ],
   "modules": [
     {
@@ -55,17 +54,6 @@
       "product_memberships": [
         "CrashReporter"
       ]
-    },
-    {
-      "name": "SnapKit",
-      "c99name": "SnapKit",
-      "src_type": "swift",
-      "label": "@swiftpkg_snapkit//:Sources_SnapKit",
-      "package_identity": "snapkit",
-      "product_memberships": [
-        "SnapKit",
-        "SnapKit-Dynamic"
-      ]
     }
   ],
   "products": [
@@ -100,22 +88,6 @@
       "target_labels": [
         "@swiftpkg_plcrashreporter//:CrashReporter"
       ]
-    },
-    {
-      "identity": "snapkit",
-      "name": "SnapKit",
-      "type": "library",
-      "target_labels": [
-        "@swiftpkg_snapkit//:Sources_SnapKit"
-      ]
-    },
-    {
-      "identity": "snapkit",
-      "name": "SnapKit-Dynamic",
-      "type": "library",
-      "target_labels": [
-        "@swiftpkg_snapkit//:Sources_SnapKit"
-      ]
     }
   ],
   "packages": [
@@ -135,15 +107,6 @@
         "commit": "1aed8f7dc79ce8e674c61e430ef51ca3db18cea9",
         "remote": "https://github.com/microsoft/PLCrashReporter.git",
         "version": "1.11.1"
-      }
-    },
-    {
-      "name": "swiftpkg_snapkit",
-      "identity": "snapkit",
-      "remote": {
-        "commit": "e74fe2a978d1216c3602b129447c7301573cc2d8",
-        "remote": "https://github.com/SnapKit/SnapKit.git",
-        "version": "5.7.0"
       }
     }
   ]
