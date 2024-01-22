@@ -24,6 +24,5 @@ swift_deps.from_file(
 use_repo(
     swift_deps,
     "swiftpkg_appcenter_sdk_apple",
-    "swiftpkg_snapkit",
 )
 # swift_deps END

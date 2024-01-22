@@ -70,7 +70,6 @@ swift_library(
     deps = [
         "@swiftpkg_appcenter_sdk_apple//:AppCenterAnalytics_AppCenterAnalytics",
         "@swiftpkg_appcenter_sdk_apple//:AppCenterCrashes_AppCenterCrashes",
-        "@swiftpkg_snapkit//:Sources_SnapKit",
     ],
 )
 
